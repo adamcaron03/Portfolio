@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Système - Portfolio de Caron Adam</title>
+    <style>
+        /* Le même style que la page TP Réseau */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .tp-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .tp-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tp-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tp-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .tp-item p {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .tp-item a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .tp-item a:hover {
+            background-color: #2980b9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Travaux Pratiques - Système</h1>
+        <div class="tp-list">
+            <div class="tp-item">
+                <h3>TP01 Configuration Windows</h3>
+                <p>Configuration de base d’un système Windows.</p>
+                <a href="../TP/SYSTEME/TP01_Config_de_base de_W_Version_Etudiants.pdf" target="_blank">Voir le TP</a>
+            </div>
+            <div class="tp-item">
+                <h3>TP02 config périphérique Cisco</h3>
+                <p>Object : Apprendre à configurer les paramètres initiaux des
+                    périphériques Cisco, à sécuriser l'accès et à assurer la connectivité de base dans un
+                    réseau local..</p>
+                <a href="../TP/SYSTEME/TP02_Configuration_Parametres_initiaux_V2.pdf" target="_blank">Voir le TP</a>
+            </div>
+            <div class="tp-item">
+                <h3>TP04 Gestion des utilisateurs</h3>
+                <p>Objectif : Acquérir des compétences pratiques dans l'administration des utilisateurs à l'aide de PowerShell et d'Active
+                    Directory Users and Computers(ADUC).</p>
+                <a href="../TP/SYSTEME/TP04_Gestion_des_utilisateurs.pdf" target="_blank">Voir le TP</a>
+            </div>
+            <!-- Vous pouvez ajouter d'autres TP ici en copiant la structure de la div "tp-item" -->
+        </div>
+        <a href="Pprincipal.html" class="back-link">Retour au portfolio</a>
+    </div>
+</body>
+</html>
