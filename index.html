@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Caron Adam - BTS SIO SISR</title>
+    
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
@@ -36,6 +39,9 @@
             padding: 0 20px;
         }
 
+        /* ----- On n'a plus besoin de header {} ici 
+           si tout est dans header.html, mais on le laisse 
+           pour conserver le style (couleur bleue, etc.). ----- */
         header {
             background-color: var(--primary-color);
             color: white;
@@ -92,7 +98,7 @@
         }
 
         main {
-            padding: 100px 0 40px;
+            padding: 100px 0 40px; /* 100px pour compenser le header en position fixed */
         }
 
         section {
@@ -170,27 +176,12 @@
         }
     </style>
 </head>
+
 <body class="texture">
+    <!-- Au lieu du <header> fixe, on utilise un conteneur qui recevra le header via JavaScript -->
+    <div id="header"></div>
+
     <noscript>JavaScript est désactivé !</noscript>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#a-propos">À propos</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li>
-                        <a href="#tp">Travaux Pratiques</a>
-                        <div class="dropdown-content">
-                            <a href="TP_reseau.html">TP Réseau</a>
-                            <a href="TP_systeme.html">TP Système</a>
-                        </div>
-                    </li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <main class="container">
         <section id="accueil">
@@ -265,6 +256,10 @@
         </div>
     </footer>
 
+    <!-- Charge le script qui injecte header.html -->
+    <script src="loadHeader.js"></script>
+
+    <!-- Ton script GSAP pour les animations -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
