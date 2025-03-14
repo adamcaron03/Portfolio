@@ -11,8 +11,8 @@
     <div id="header"></div>
 
     <!-- MAIN CONTENT -->
-    <main>
-        <div class="container">
+    <main class="main-container">
+        <section>
             <h1>Contactez-moi</h1>
             <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
 
@@ -28,7 +28,7 @@
             </div>
 
             <a href="index.html" class="back-link">Retour au portfolio</a>
-        </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
@@ -38,33 +38,5 @@
 
     <!-- SCRIPTS -->
     <script src="loadHeader.js"></script>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const formData = new FormData(this);
-            fetch(this.action, {
-                method: "POST",
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    document.getElementById('message-status').textContent = "Message envoyé avec succès !";
-                    document.getElementById('message-status').className = 'success';
-                    this.reset();
-                    setTimeout(() => {
-                        document.getElementById('message-status').textContent = '';
-                        document.getElementById('message-status').className = '';
-                    }, 5000);
-                } else {
-                    document.getElementById('message-status').textContent = "Une erreur est survenue, veuillez réessayer.";
-                    document.getElementById('message-status').className = 'error';
-                }
-            }).catch(error => {
-                document.getElementById('message-status').textContent = "Erreur de connexion, veuillez réessayer.";
-                document.getElementById('message-status').className = 'error';
-            });
-        });
-    </script>
 </body>
 </html>
