@@ -1,52 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* ---------- VARIABLES ---------- */
+/* ============================= */
+/*         VARIABLES CSS         */
+/* ============================= */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --background-color: #ecf0f1;
-    --text-color: #34495e;
+    --primary-color: #3498db;   /* Couleur principale (bleu) */
+    --secondary-color: #2c3e50; /* Couleur secondaire (gris foncé) */
+    --accent-color: #e74c3c;    /* Couleur d'accent (rouge) */
+    --background-color: #ecf0f1; /* Fond global (gris clair) */
+    --text-color: #34495e;      /* Couleur du texte principal */
 }
 
-/* ---------- RESET ---------- */
+/* ============================= */
+/*            RESET              */
+/* ============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ============================= */
+/*          STYLE GLOBAL         */
+/* ============================= */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Utilisation de la police Roboto */
+    background-color: var(--background-color); /* Fond général */
+    color: var(--text-color); /* Couleur du texte */
+    line-height: 1.6; /* Espacement des lignes */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Assure que la page occupe toute la hauteur */
 }
 
-/* ---------- HEADER ---------- */
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
 header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
+    background-color: var(--primary-color); /* Fond du header */
+    color: white; /* Couleur du texte */
+    padding: 20px 0; /* Espacement vertical */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre du header */
+    position: fixed; /* Fixe le header en haut */
+    width: 100%; /* Largeur complète */
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
 }
 
+/* ============================= */
+/*          NAVIGATION           */
+/* ============================= */
 nav ul {
-    list-style: none;
+    list-style: none; /* Supprime les puces */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Répartit les éléments */
 }
 
 nav ul li {
-    position: relative;
+    position: relative; /* Nécessaire pour le menu déroulant */
 }
 
 nav ul li a {
@@ -57,25 +69,59 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Rouge au survol */
 }
 
-/* ---------- MAIN CONTENT ---------- */
+/* ============================= */
+/*          MENU DÉROULANT       */
+/* ============================= */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-color);
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* ============================= */
+/*          CONTENU MAIN         */
+/* ============================= */
 main {
-    flex: 1;
-    padding-top: 120px; /* Espacement pour éviter que le contenu soit caché par le header */
+    flex: 1; /* Permet d'occuper l'espace restant */
+    padding-top: 120px; /* Décalage pour ne pas cacher sous le header */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ============================= */
+/*            CONTAINER          */
+/* ============================= */
 .container {
-    max-width: 900px;
+    max-width: 900px; /* Largeur du contenu */
     width: 100%;
-    text-align: center;
+    text-align: center; /* Centrer le texte */
 }
 
-/* ---------- FORMULAIRE DE CONTACT ---------- */
+/* ============================= */
+/*        FORMULAIRE CONTACT     */
+/* ============================= */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -93,6 +139,7 @@ main {
     text-align: left;
 }
 
+/* Champs du formulaire */
 .contact-form input,
 .contact-form textarea {
     margin-bottom: 15px;
@@ -103,11 +150,13 @@ main {
     width: 100%;
 }
 
+/* Zone de texte */
 .contact-form textarea {
     min-height: 120px;
     resize: vertical;
 }
 
+/* Bouton d'envoi */
 .contact-form button {
     background-color: var(--primary-color);
     color: white;
@@ -121,10 +170,12 @@ main {
 }
 
 .contact-form button:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Bleu foncé au survol */
 }
 
-/* ---------- MESSAGE STATUS ---------- */
+/* ============================= */
+/*          MESSAGE STATUS       */
+/* ============================= */
 #message-status {
     margin-top: 20px;
     padding: 10px;
@@ -132,22 +183,26 @@ main {
     text-align: center;
 }
 
+/* Message succès */
 .success {
     background-color: #2ecc71;
     color: white;
 }
 
+/* Message erreur */
 .error {
     background-color: #e74c3c;
     color: white;
 }
 
-/* ---------- FOOTER ---------- */
+/* ============================= */
+/*           FOOTER              */
+/* ============================= */
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Couleur de fond */
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 0; /* Espacement vertical */
     font-size: 14px;
-    margin-top: auto;
+    margin-top: auto; /* Positionne toujours le footer en bas */
 }
