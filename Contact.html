@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Portfolio de Caron Adam</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <div id="header"></div>
-    <div class="container">
-        <h1>Contactez-moi</h1>
-<form class="contact-form" id="contact-form" action="https://formspree.io/f/mgvaegjn" method="POST">
-    <input type="text" name="name" placeholder="Votre nom" required>
-    <input type="email" name="email" placeholder="Votre email" required>
-    <input type="text" name="subject" placeholder="Sujet" required>
-    <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
-        <div id="message-status"></div>
-        <a href="index.html" class="back-link">Retour au portfolio</a>
-    </div>
 
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <section>
+            <h1>Contactez-moi</h1>
+            <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+
+            <div class="form-container">
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/mgvaegjn" method="POST">
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <input type="text" name="subject" placeholder="Sujet" required>
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+                <div id="message-status"></div>
+            </div>
+            
+            <a href="index.html" class="back-link">Retour au portfolio</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Caron Adam - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
     <script>
+        // Formulaire AJAX avec confirmation de message envoyé
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -39,6 +58,7 @@
             }, 1000);
         });
     </script>
-    <script src="loadHeader.js"></script>
+
+    <script src="loadHeader.js"></script> <!-- Vérifie si ce fichier fonctionne bien -->
 </body>
 </html>
