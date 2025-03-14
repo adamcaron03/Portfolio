@@ -11,7 +11,7 @@
     <div id="header"></div>
 
     <!-- MAIN CONTENT -->
-    <main class="container">
+    <main class="container contact-section">
         <section>
             <h1>Contactez-moi</h1>
             <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
@@ -40,25 +40,24 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Formulaire AJAX avec confirmation de message envoyé
+        // Gestion de l'envoi du formulaire avec confirmation
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
+
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: "POST",
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('message-status').textContent = "Message envoyé avec succès !";
+                    document.getElementById('message-status').className = 'success';
+                    this.reset();
+                    setTimeout(() => {
+                        document.getElementById('message-status').textContent = '';
+                        document.getElementById('message-status').className = '';
+                    }, 5000);
+                } else {
+                    document.getElementById('message-status').textContent = "Une erreur est survenue, veuillez réessayer.";
             
-            setTimeout(() => {
-                const messageStatus = document.getElementById('message-status');
-                messageStatus.textContent = "Message envoyé avec succès !";
-                messageStatus.className = 'success';
-                
-                this.reset();
-
-                setTimeout(() => {
-                    messageStatus.textContent = '';
-                    messageStatus.className = '';
-                }, 5000);
-            }, 1000);
-        });
-    </script>
-
-    <script src="loadHeader.js"></script> <!-- Vérifie si ce fichier fonctionne bien -->
-</body>
-</html>
