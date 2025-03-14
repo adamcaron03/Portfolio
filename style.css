@@ -1,28 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* ============================= */
-/*         VARIABLES CSS         */
-/* ============================= */
+/* ---------- VARIABLES ---------- */
 :root {
-    --primary-color: #3498db;   /* Couleur principale : Bleu */
-    --secondary-color: #2c3e50; /* Couleur secondaire : Gris foncé */
-    --accent-color: #e74c3c;    /* Couleur d'accentuation : Rouge */
-    --background-color: #ecf0f1; /* Fond gris clair */
-    --text-color: #34495e;      /* Couleur du texte principal */
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
 }
 
-/* ============================= */
-/*            RESET              */
-/* ============================= */
+/* ---------- RESET ---------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ============================= */
-/*       STYLE GLOBAL BODY       */
-/* ============================= */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
@@ -33,9 +26,7 @@ body {
     min-height: 100vh; /* Assure que la page occupe toute la hauteur */
 }
 
-/* ============================= */
-/*            HEADER             */
-/* ============================= */
+/* ---------- HEADER ---------- */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -45,17 +36,13 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Place le header au-dessus du reste */
+    z-index: 1000;
 }
 
-/* ============================= */
-/*           NAVIGATION          */
-/* ============================= */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Espacement entre les éléments du menu */
+    justify-content: space-around;
 }
 
 nav ul li {
@@ -73,40 +60,22 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
-/* ============================= */
-/*         MAIN CONTENT          */
-/* ============================= */
+/* ---------- MAIN CONTENT ---------- */
 main {
     flex: 1;
-    padding-top: 100px; /* Permet d'éviter que le contenu soit caché par le header */
+    padding-top: 120px; /* Espacement pour éviter que le contenu soit caché par le header */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-/* ============================= */
-/*          CONTAINER            */
-/* ============================= */
 .container {
     max-width: 900px;
     width: 100%;
     text-align: center;
 }
 
-/* ============================= */
-/*         SECTIONS              */
-/* ============================= */
-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-/* ============================= */
-/*         FORMULAIRE            */
-/* ============================= */
+/* ---------- FORMULAIRE DE CONTACT ---------- */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -155,9 +124,7 @@ section {
     background-color: #2980b9;
 }
 
-/* ============================= */
-/*       MESSAGE STATUS          */
-/* ============================= */
+/* ---------- MESSAGE STATUS ---------- */
 #message-status {
     margin-top: 20px;
     padding: 10px;
@@ -175,9 +142,7 @@ section {
     color: white;
 }
 
-/* ============================= */
-/*          FOOTER               */
-/* ============================= */
+/* ---------- FOOTER ---------- */
 footer {
     background-color: var(--secondary-color);
     color: white;
