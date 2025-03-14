@@ -25,9 +25,10 @@ body {
 
 /* ---------- CONTAINER GLOBAL ---------- */
 .container {
-    max-width: 1200px;
+    max-width: 900px; /* Ajustement de la largeur pour un bon centrage */
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px; /* Ajout d'un padding pour espacer du haut */
+    text-align: center; /* Centre le texte */
 }
 
 /* ---------- HEADER ---------- */
@@ -215,18 +216,21 @@ a:hover {
 .form-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: 20px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 450px; /* Ajustement de la taille */
     width: 100%;
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .contact-form input,
@@ -240,7 +244,7 @@ a:hover {
 }
 
 .contact-form textarea {
-    min-height: 150px;
+    min-height: 120px;
     resize: vertical;
 }
 
@@ -248,7 +252,7 @@ a:hover {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
@@ -284,4 +288,9 @@ footer {
     background-color: var(--secondary-color);
     color: white;
     text-align: center;
+}
+
+/* ---------- ESPACEMENT POUR QUE LE FORMULAIRE NE SOIT PAS COLLÉ EN HAUT ---------- */
+.contact-section {
+    margin-top: 100px;
 }
