@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Réseau - Portfolio de Caron Adam</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .tp-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .tp-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tp-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tp-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .tp-item p {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .tp-item a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .tp-item a:hover {
+            background-color: #2980b9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Styles du menu de navigation */
+nav {
+    background-color: #3498db; /* Couleur bleu */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ecf0f1;
+}
+
+/* Style pour le sous-menu */
+nav ul li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ecf0f1;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <div id="header"></div> 
+    <div class="container">
+        <h1>Travaux Pratiques - Réseau</h1>
+<div class="tp-list">
+    <div class="tp-item">
+        <h3>TP01 Le reseau local</h3>
+        <p>Mise en place d'un réseau local simple avec adressage IP statique et configuration de base des équipements réseau. Ce TP permet de comprendre le rôle du DHCP, du NAT et des passerelles par défaut.</p>
+        <a href="reseau/TP01_Le_reseau_local.pdf" target="_blank">Voir le TP</a>
+    </div>
+    <div class="tp-item">
+        <h3>TP02 Réseau poste à poste</h3>
+        <p>Configuration d’un réseau entre plusieurs postes sans serveur central. Mise en place du partage de fichiers et d’imprimantes, avec gestion des autorisations d'accès et de la résolution de noms en local.</p>
+        <a href="reseau/TP02_Réseau_poste_à_poste.pdf" target="_blank">Voir le TP</a>
+    </div>
+    <div class="tp-item">
+        <h3>TP03 Réseau_Client-Serveur</h3>
+        <p>Mise en place d’un réseau avec un serveur central assurant l'authentification des utilisateurs et la gestion des ressources partagées. Configuration d'un Active Directory, gestion des utilisateurs, et contrôle des accès.</p>
+        <a href="reseau/TP03_Réseau_Client-Serveur_v3.pdf" target="_blank">Voir le TP</a>
+    </div>
+    <div class="tp-item">
+        <h3>TP05 Routage inter Vlan</h3>
+        <p>Configuration d’un réseau segmenté en plusieurs VLANs pour améliorer la sécurité et la gestion du trafic. Mise en place du routage entre VLANs à l’aide d’un routeur ou d’un switch de niveau 3.</p>
+        <a href="reseau/TP05_Routage_inter_Vlan.pdf" target="_blank">Voir le TP</a>
+    </div>
+</div>
+    <script src="loadHeader.js"></script>
+</body>
+</html>
