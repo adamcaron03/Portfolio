@@ -4,11 +4,11 @@
 /*         VARIABLES CSS         */
 /* ============================= */
 :root {
-    --primary-color: #3498db;   /* Bleu */
-    --secondary-color: #2c3e50; /* Gris foncé */
-    --accent-color: #e74c3c;    /* Rouge */
+    --primary-color: #3498db;   /* Couleur principale : Bleu */
+    --secondary-color: #2c3e50; /* Couleur secondaire : Gris foncé */
+    --accent-color: #e74c3c;    /* Couleur d'accentuation : Rouge */
     --background-color: #ecf0f1; /* Fond gris clair */
-    --text-color: #34495e;      /* Texte principal */
+    --text-color: #34495e;      /* Couleur du texte principal */
 }
 
 /* ============================= */
@@ -30,7 +30,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Assure que la page occupe toute la hauteur */
 }
 
 /* ============================= */
@@ -39,20 +39,23 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1000; /* Place le header au-dessus du reste */
 }
 
+/* ============================= */
+/*           NAVIGATION          */
+/* ============================= */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 30px; /* Espacement entre les éléments du menu */
 }
 
 nav ul li {
@@ -75,7 +78,7 @@ nav ul li a:hover {
 /* ============================= */
 main {
     flex: 1;
-    padding-top: 100px;
+    padding-top: 100px; /* Permet d'éviter que le contenu soit caché par le header */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,9 +88,9 @@ main {
 /*          CONTAINER            */
 /* ============================= */
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
-    padding: 20px;
+    text-align: center;
 }
 
 /* ============================= */
@@ -101,37 +104,75 @@ section {
     margin-bottom: 20px;
 }
 
-/* ----------------------------- */
-/*        GRID PRINCIPAL         */
-/* ----------------------------- */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* 3 colonnes */
-    gap: 20px;
-    align-items: start;
+/* ============================= */
+/*         FORMULAIRE            */
+/* ============================= */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
 }
 
 /* ============================= */
-/*       SECTIONS INDIVIDUELLES  */
+/*       MESSAGE STATUS          */
 /* ============================= */
-.welcome,
-.contact {
+#message-status {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
     text-align: center;
-    padding: 20px;
 }
 
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.success {
+    background-color: #2ecc71;
+    color: white;
 }
 
-.tp-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.error {
+    background-color: #e74c3c;
+    color: white;
 }
 
 /* ============================= */
