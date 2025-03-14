@@ -25,20 +25,22 @@ body {
 
 /* ---------- CONTAINER GLOBAL ---------- */
 .container {
-    max-width: 900px; /* Ajustement de la largeur pour un bon centrage */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px; /* Ajout d'un padding pour espacer du haut */
-    text-align: center; /* Centre le texte */
+    padding: 40px 20px;
+    text-align: center;
 }
 
 /* ---------- HEADER ---------- */
-header {
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--primary-color);
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
     z-index: 1000;
 }
 
@@ -88,18 +90,22 @@ nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ---------- MAIN CONTENT ---------- */
 main {
-    padding-top: 100px;
+    padding-top: 80px; /* Ajout d'un padding-top pour éviter que le header cache le contenu */
 }
 
+/* ---------- SECTIONS ---------- */
 section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section:hover {
@@ -137,81 +143,6 @@ a:hover {
     margin-top: 20px;
 }
 
-/* ---------- SKILLS ---------- */
-.skills {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.skill {
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.skill:hover {
-    transform: scale(1.05);
-}
-
-.skill-icon {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-/* ---------- PROGRESS BAR ---------- */
-.progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 10px;
-    background-color: var(--primary-color);
-    transition: width 1s ease-in-out;
-}
-
-/* ---------- TRAVAUX PRATIQUES ---------- */
-.tp-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.tp-item {
-    background: white;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 300px;
-}
-
-.tp-item:hover {
-    transform: scale(1.05);
-}
-
-.tp-item a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 5px;
-}
-
-.tp-item a:hover {
-    background: #2980b9;
-}
-
 /* ---------- FORMULAIRE DE CONTACT ---------- */
 .form-container {
     display: flex;
@@ -224,7 +155,7 @@ a:hover {
 .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 450px; /* Ajustement de la taille */
+    max-width: 450px;
     width: 100%;
     background-color: white;
     padding: 30px;
@@ -292,5 +223,5 @@ footer {
 
 /* ---------- ESPACEMENT POUR QUE LE FORMULAIRE NE SOIT PAS COLLÉ EN HAUT ---------- */
 .contact-section {
-    margin-top: 100px;
+    margin-top: 40px;
 }
