@@ -369,26 +369,3 @@ footer {
 .projet-box ul li {
     margin-bottom: 8px;
 }
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.skill {
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.skill img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 15px;
-    object-fit: contain;
-}
