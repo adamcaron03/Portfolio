@@ -385,3 +385,31 @@ footer {
     font-weight: bold;
     color: var(--primary-color); /* Assure la cohérence avec le style */
 }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.skill-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.skill {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 200px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
