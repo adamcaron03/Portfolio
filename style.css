@@ -369,3 +369,10 @@ footer {
 .projet-box ul li {
     margin-bottom: 8px;
 }
+
+.skill img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
