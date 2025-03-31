@@ -35,13 +35,21 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 20px 0;
+    padding: 20px 0; /* Ajuste cette valeur selon ta hauteur de header */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
+    top: 0; /* Assure-toi que le header est toujours en haut */
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
 
+/* ---------- BODY ---------- */
+body {
+    padding-top: 80px; /* Ajuste cette valeur pour correspondre à la hauteur de ton header (padding + bordure) */
+}
+
+/* ---------- NAVIGATION ---------- */
 nav ul {
     list-style: none;
     display: flex;
