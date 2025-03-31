@@ -42,10 +42,6 @@ header {
     z-index: 1000;
 }
 
-main {
-    padding-top: 80px;
-}
-
 nav ul {
     list-style: none;
     display: flex;
